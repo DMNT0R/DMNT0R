@@ -1,3 +1,3 @@
 ## Hi there 👋
-<!--THM_BADGE:start-->
-<!--THM_BADGE:end-->
+
+![tryhackme stats](https://raw.githubusercontent.com/DMNTOR/DMNTOR/master/assets/thm_propic.png)
