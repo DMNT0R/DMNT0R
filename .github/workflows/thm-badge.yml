@@ -5,18 +5,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-badge:
+  tryhackme-badge-update:
+    name: Update THM badge
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Update THM Badge
-        uses: p4p1/tryhackme-badge-workflow@main
+      - uses: actions/checkout@v2
+      - uses: p4p1/tryhackme-badge-workflow@main
         with:
           username: 'DMNT0R'
-      - name: Commit changes
-        run: |
-          git config --local user.name "github-actions"
-          git config --local user.email "actions@github.com"
-          git add -A
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update THM badge"
-          git push
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
